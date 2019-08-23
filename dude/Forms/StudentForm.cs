@@ -23,7 +23,7 @@ namespace dude
             InitializeComponent();
             db = new StudentContext();
             //db.Students.Load();
-            // dataGridView1.DataSource = db.Students.Include(student => student.Specialty).ToList();
+            // dataGridView1.DataSource = db.Students.Include(student => student.Specialty).ToList();123
             Students = db.Students.Include(student => student.Specialty).ToBindingList();
             dataGridView1.DataSource = Students;
         }
