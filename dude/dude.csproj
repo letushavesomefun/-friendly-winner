@@ -53,7 +53,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Extensions.cs" />
     <Compile Include="Classes\Faculty.cs" />
+    <Compile Include="Forms\FacultyChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FacultyChange.Designer.cs">
+      <DependentUpon>FacultyChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormFaculty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormFaculty.Designer.cs">
+      <DependentUpon>FormFaculty.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\SpecialtyChange.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +96,12 @@
     <Compile Include="Classes\Specialty.cs" />
     <Compile Include="Classes\Student.cs" />
     <Compile Include="Classes\StudentContext.cs" />
+    <EmbeddedResource Include="Forms\FacultyChange.resx">
+      <DependentUpon>FacultyChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormFaculty.resx">
+      <DependentUpon>FormFaculty.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\SpecialtyChange.resx">
       <DependentUpon>SpecialtyChange.cs</DependentUpon>
     </EmbeddedResource>
@@ -105,6 +124,7 @@
       <DependentUpon>Specialties.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Faculty.datasource" />
     <None Include="Properties\DataSources\Specialty.datasource" />
     <None Include="Properties\DataSources\Student.datasource" />
     <None Include="Properties\Settings.settings">
