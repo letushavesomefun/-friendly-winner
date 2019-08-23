@@ -1,0 +1,38 @@
+Z:\с# projects\dude\bin\Debug\dude.exe.config
+Z:\с# projects\dude\bin\Debug\dude.exe
+Z:\с# projects\dude\bin\Debug\dude.pdb
+Z:\с# projects\dude\bin\Debug\EntityFramework.dll
+Z:\с# projects\dude\bin\Debug\EntityFramework.SqlServer.dll
+Z:\с# projects\dude\bin\Debug\EntityFramework.xml
+Z:\с# projects\dude\bin\Debug\EntityFramework.SqlServer.xml
+Z:\с# projects\dude\obj\Debug\dude.csprojAssemblyReference.cache
+Z:\с# projects\dude\obj\Debug\dude.Properties.Resources.resources
+Z:\с# projects\dude\obj\Debug\dude.csproj.GenerateResource.cache
+Z:\с# projects\dude\obj\Debug\dude.csproj.CoreCompileInputs.cache
+Z:\с# projects\dude\obj\Debug\dude.csproj.CopyComplete
+Z:\с# projects\dude\obj\Debug\dude.exe
+Z:\с# projects\dude\obj\Debug\dude.pdb
+Z:\с# projects\dude\obj\Debug\dude.Specialties.resources
+Z:\с# projects\dude\obj\Debug\dude.StudentForm.resources
+Z:\с# projects\dude\obj\Debug\dude.Forms.SpecialtyChange.resources
+Z:\с# projects\dude\obj\Debug\dude.Forms.StudentChange.resources
+C:\Users\glebs\-friendly-winner\dude\obj\Debug\dude.Forms.SpecialtyChange.resources
+C:\Users\glebs\-friendly-winner\dude\obj\Debug\dude.Forms.StudentChange.resources
+C:\Users\glebs\-friendly-winner\dude\obj\Debug\dude.StudentForm.resources
+C:\Users\glebs\-friendly-winner\dude\obj\Debug\dude.Properties.Resources.resources
+C:\Users\glebs\-friendly-winner\dude\obj\Debug\dude.Specialties.resources
+C:\Users\glebs\-friendly-winner\dude\obj\Debug\dude.csproj.GenerateResource.cache
+C:\Users\glebs\-friendly-winner\dude\obj\Debug\dude.csproj.CoreCompileInputs.cache
+C:\Users\glebs\-friendly-winner\dude\obj\Debug\dude.exe
+C:\Users\glebs\-friendly-winner\dude\obj\Debug\dude.pdb
+C:\Users\glebs\-friendly-winner\dude\bin\Debug\dude.exe.config
+C:\Users\glebs\-friendly-winner\dude\bin\Debug\dude.exe
+C:\Users\glebs\-friendly-winner\dude\bin\Debug\dude.pdb
+C:\Users\glebs\-friendly-winner\dude\bin\Debug\EntityFramework.dll
+C:\Users\glebs\-friendly-winner\dude\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\glebs\-friendly-winner\dude\bin\Debug\EntityFramework.xml
+C:\Users\glebs\-friendly-winner\dude\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\glebs\-friendly-winner\dude\obj\Debug\dude.csproj.CopyComplete
+C:\Users\glebs\-friendly-winner\dude\obj\Debug\dude.csprojAssemblyReference.cache
+C:\Users\glebs\-friendly-winner\dude\obj\Debug\dude.Forms.FormFaculty.resources
+C:\Users\glebs\-friendly-winner\dude\obj\Debug\dude.Forms.FacultyChange.resources
