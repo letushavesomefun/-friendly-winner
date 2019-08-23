@@ -8,13 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace dude.Forms
+namespace WindowsFormsApp1
 {
-    public partial class FacultyChange : Form
+    public partial class Form1 : Form
     {
-        public FacultyChange()
+        public Form1()
         {
             InitializeComponent();
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            Form2 fm = new Form2();
+            fm.Show();
         }
     }
 }

@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Data.Entity;
 using System.Drawing;
@@ -15,20 +14,16 @@ namespace dude
 {
     public partial class StudentForm : Form
     {
-       
-        readonly StudentContext db;
-        private BindingList<Student> Students { get; set; }
+        StudentContext db;
         public StudentForm()
         {
             InitializeComponent();
             db = new StudentContext();
-            //db.Students.Load();
-            // dataGridView1.DataSource = db.Students.Include(student => student.Specialty).ToList();
-            Students = db.Students.Include(student => student.Specialty).ToBindingList();
-            dataGridView1.DataSource = Students;
+            db.Students.Load();
+            dataGridView1.DataSource = db.Students.Local.ToBindingList();
         }
 
-        private void Add_button_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             StudentChange studentForm = new StudentChange();
             List<Specialty> specialties = db.Specialties.ToList();
@@ -39,39 +34,18 @@ namespace dude
             DialogResult result = studentForm.ShowDialog(this);
             if (result == DialogResult.Cancel)
                 return;
-           
-                Student student = new Student();
-            try
-            {
-                student.FIO = studentForm.textBox1.Text.ToString();
-                student.Adress = studentForm.textBox2.Text;
-                student.Phone = studentForm.textBox3.Text;
-                student.Year = Convert.ToInt32(studentForm.textBox4.Text);
-                student.Specialty = (Specialty)studentForm.comboBox1.SelectedItem;
-            }
-            catch
-            {
-                MessageBox.Show("Не все поля заполнены");
-                return;
-            }
-            var results = new List<ValidationResult>();
-            var context = new ValidationContext(student);
-            if (!Validator.TryValidateObject(student, context, results, true))
-            {
-                
-                    MessageBox.Show("Поля заполнены некорректно");
-                
-            }
-            else
-            {
-                db.Students.Add(student);
-                db.SaveChanges();
-                Students.Add(student);
-                MessageBox.Show("Новый студент добавлен");
-            }
+            Student student = new Student();
+            student.FIO = studentForm.textBox1.Text.ToString();
+            student.adress = studentForm.textBox2.Text;
+            student.Phone =  Convert.ToInt32(studentForm.textBox3.Text);
+            student.Year = Convert.ToInt32(studentForm.textBox4.Text);
+            student.Specialty = (Specialty)studentForm.comboBox1.SelectedItem;
+            db.Students.Add(student);
+            db.SaveChanges();
+            MessageBox.Show("Новый студент добавлен");
         }
 
-        private void Change_button_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
@@ -84,9 +58,8 @@ namespace dude
                 Student student = db.Students.Find(id);
 
                 StudentChange studentChange = new StudentChange();
-
                 studentChange.textBox1.Text = student.FIO;
-                studentChange.textBox2.Text = student.Adress;
+                studentChange.textBox2.Text = student.adress;
                 studentChange.textBox3.Text = student.Phone.ToString();
                 studentChange.textBox4.Text = student.Year.ToString();
                 studentChange.comboBox1.SelectedItem = student.Specialty;
@@ -104,37 +77,21 @@ namespace dude
 
                 if (result == DialogResult.Cancel)
                     return;
-                try
-                {
-                    student.FIO = studentChange.textBox1.Text.ToString();
-                    student.Adress = studentChange.textBox2.Text;
-                    student.Phone = studentChange.textBox3.Text;
-                    student.Year = Convert.ToInt32(studentChange.textBox4.Text);
-                    student.Specialty = (Specialty)studentChange.comboBox1.SelectedItem;
-                }
-                catch
-                { MessageBox.Show("Поля заполнены некорректно"); }
-                var results = new List<ValidationResult>();
-                var context = new ValidationContext(student);
-                if (!Validator.TryValidateObject(student, context, results, true))
-                {
 
-                    MessageBox.Show("Поля заполнены некорректно");
+                student.FIO = studentChange.textBox1.Text.ToString();
+                student.adress = studentChange.textBox2.Text;
+                student.Phone = Convert.ToInt32(studentChange.textBox3.Text);
+                student.Year = Convert.ToInt32(studentChange.textBox4.Text);
+                student.Specialty = (Specialty)studentChange.comboBox1.SelectedItem;
 
-                }
-                else
-                {
-                    db.Entry(student).State = EntityState.Modified;
-                    db.SaveChanges();
-                    MessageBox.Show("Объект обновлен");
-                }
-               
+                db.Entry(student).State = EntityState.Modified;
+                db.SaveChanges();
 
-               
+                MessageBox.Show("Объект обновлен");
             }
         }
 
-        private void Delete_button_Click(object sender, EventArgs e)
+        private void Button3_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
@@ -147,8 +104,6 @@ namespace dude
                 Student student = db.Students.Find(id);
                 db.Students.Remove(student);
                 db.SaveChanges();
-                Students.Remove(student);
-
 
                 MessageBox.Show("Объект удален");
             }

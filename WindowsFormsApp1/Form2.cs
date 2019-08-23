@@ -8,15 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace dude.Forms
+namespace WindowsFormsApp1
 {
-    public partial class StudentChange : Form
+    public partial class Form2 : Form
     {
-        public StudentChange()
+        public Form2()
         {
             InitializeComponent();
         }
-
-       
     }
 }

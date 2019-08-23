@@ -34,12 +34,16 @@
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Faculty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.specialtyBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.Add_button = new System.Windows.Forms.Button();
-            this.Delete_button = new System.Windows.Forms.Button();
-            this.Change_button = new System.Windows.Forms.Button();
-            this.Faculties_button = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.specialtyBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -53,8 +57,7 @@
             this.dataGridView1.DataSource = this.specialtyBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(49, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(344, 289);
+            this.dataGridView1.Size = new System.Drawing.Size(481, 150);
             this.dataGridView1.TabIndex = 0;
             // 
             // idDataGridViewTextBoxColumn
@@ -79,61 +82,89 @@
             // 
             this.specialtyBindingSource.DataSource = typeof(dude.Specialty);
             // 
-            // Add_button
+            // listBox1
             // 
-            this.Add_button.Location = new System.Drawing.Point(49, 333);
-            this.Add_button.Name = "Add_button";
-            this.Add_button.Size = new System.Drawing.Size(75, 23);
-            this.Add_button.TabIndex = 2;
-            this.Add_button.Text = "Добавить";
-            this.Add_button.UseVisualStyleBackColor = true;
-            this.Add_button.Click += new System.EventHandler(this.Add_button_Click_1);
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(576, 79);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(164, 147);
+            this.listBox1.TabIndex = 1;
             // 
-            // Delete_button
+            // button1
             // 
-            this.Delete_button.Location = new System.Drawing.Point(318, 333);
-            this.Delete_button.Name = "Delete_button";
-            this.Delete_button.Size = new System.Drawing.Size(75, 23);
-            this.Delete_button.TabIndex = 3;
-            this.Delete_button.Text = "Удалить";
-            this.Delete_button.UseVisualStyleBackColor = true;
-            this.Delete_button.Click += new System.EventHandler(this.Delete_button_Click);
+            this.button1.Location = new System.Drawing.Point(60, 203);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click_1);
             // 
-            // Change_button
+            // button2
             // 
-            this.Change_button.Location = new System.Drawing.Point(183, 333);
-            this.Change_button.Name = "Change_button";
-            this.Change_button.Size = new System.Drawing.Size(75, 23);
-            this.Change_button.TabIndex = 4;
-            this.Change_button.Text = "Изменить";
-            this.Change_button.UseVisualStyleBackColor = true;
-            this.Change_button.Click += new System.EventHandler(this.Change_button_Click);
+            this.button2.Location = new System.Drawing.Point(243, 203);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
-            // Faculties_button
+            // button3
             // 
-            this.Faculties_button.Location = new System.Drawing.Point(49, 372);
-            this.Faculties_button.Name = "Faculties_button";
-            this.Faculties_button.Size = new System.Drawing.Size(344, 23);
-            this.Faculties_button.TabIndex = 5;
-            this.Faculties_button.Text = "Факультеты";
-            this.Faculties_button.UseVisualStyleBackColor = true;
-            this.Faculties_button.Click += new System.EventHandler(this.Faculties_Click_1);
+            this.button3.Location = new System.Drawing.Point(455, 188);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.Button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(576, 245);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(164, 23);
+            this.button4.TabIndex = 5;
+            this.button4.Text = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.Button4_Click);
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(141, 232);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(240, 96);
+            this.dataGridView2.TabIndex = 6;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(445, 298);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 7;
             // 
             // Specialties
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(455, 407);
-            this.Controls.Add(this.Faculties_button);
-            this.Controls.Add(this.Change_button);
-            this.Controls.Add(this.Delete_button);
-            this.Controls.Add(this.Add_button);
+            this.ClientSize = new System.Drawing.Size(800, 340);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Specialties";
             this.Text = "Specialties";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.specialtyBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -141,12 +172,15 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource specialtyBindingSource;
-        private System.Windows.Forms.Button Add_button;
-        private System.Windows.Forms.Button Delete_button;
-        private System.Windows.Forms.Button Change_button;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Faculty;
-        private System.Windows.Forms.Button Faculties_button;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
